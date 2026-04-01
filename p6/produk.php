@@ -16,9 +16,18 @@
                         // satu baris terambil, lalu diubah menjadi objek
 
         while($data = $produk->fetch_object()){ // akan melakukan looping. setiap kali looping fetch objek akan dilakukan 1x, akan looping terus sampai produknya habis
-            var_dump($data); //1 data satu objek, lalu ditampilkan
+            // var_dump($data); //1 data satu objek, lalu ditampilkan
+            // var_dump($data->ProductName); // menampilkan nama produk saja, karena data sudah dalam bentuk objek, maka bisa langsung memanggil propertinya, tapi string masih kelihatan karena pake var_dump
+            
+            print($data->ProductID); 
+            print(" - ");
+            print($data->ProductName);
+            print(" - ");
+            print($data->UnitPrice); 
             print "<br>----------------------<br>";
         }
+
+
     ?>
 </body>
 </html>
