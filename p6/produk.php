@@ -16,7 +16,7 @@
                         // satu baris terambil, lalu diubah menjadi objek
 
         while($data = $produk->fetch_object()){ // akan melakukan looping. setiap kali looping fetch objek akan dilakukan 1x, akan looping terus sampai produknya habis
-            var_dump($data);
+            var_dump($data); //1 data satu objek, lalu ditampilkan
             print "<br>----------------------<br>";
         }
     ?>
