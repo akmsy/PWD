@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JS</title>
+</head>
+<body>
+    <h1 id="judul">Wisata DIY</h1>
+    <p>
+        Wisata di Daerah Istimewa Yogyakarta (DIY) menawarkan pengalaman budaya yang kaya dan beragam. Dari keindahan alam seperti Pantai Parangtritis dan Gunung Merapi, hingga warisan budaya seperti Keraton Yogyakarta dan Candi Prambanan, DIY memiliki banyak destinasi menarik. Wisatawan dapat menikmati seni tradisional, kuliner khas, serta suasana yang ramah dan hangat di kota ini. DIY juga dikenal dengan kerajinan tangan seperti batik dan perak, yang menjadi oleh-oleh populer bagi pengunjung. Dengan kombinasi keindahan alam dan kekayaan budaya, DIY adalah destinasi wisata yang wajib dikunjungi di Indonesia.
+    </p>
+    <button onclick="ambildatah1()">Ambil Data h1</button>
+
+    <br><br>
+
+    <input type="text" id="nama"><br>
+    <button onclick="isiNama()">Isi text box nama</button>
+
+    <br><br>
+    
+    <h1 class="makanan">Gudeg</h1>
+    <h1 class="makanan">Pecel</h1>
+    <h1 class="makanan">Sate Klatak</h1>
+    <h1 class="makanan">Lotek</h1>
+    <button onclick="ambilDataMakanan()">Ambil Data Makanan</button>
+
+</body>
+
+<script>
+    // getElementByName -> kalo elemen punya properti name
+    // getElementByTagName -> kalo elemen punya tag name
+    // getElementById -> kalo elemen punya id
+    // getElementByClassName -> kalo elemen punya class name
+    // innerText -> untuk mengambil isi dari elemen
+    // innnerHTML -> untuk mengambil isi dari elemen termasuk tag HTML
+    // value -> untuk mengambil atau mengisi isi dari elemen input
+
+    // javascript yang banyak dipakai menggunakan javascrip framework seperti react, angular, vue, dll. 
+    // jQuery adalah salah satu library javascript yang populer untuk memudahkan manipulasi DOM, event handling, dan animasi. Dengan jQuery, kita bisa menulis kode yang lebih singkat dan mudah dibaca untuk melakukan berbagai tugas di halaman web.
+
+    
+
+    function ambildatah1() {
+        let data = document.getElementById("judul").innerText; // objek untuk mengambil h1 
+                 //properti //method
+        console.log(data); // menampilkan isi dari h1
+    }
+
+    function isiNama() {
+        document.getElementById("nama").value = "Upin Ipin"; // objek untuk mengambil text box nama, properti untuk mengisi text box nama
+                                        // mengisi elemen dengan value "Upin Ipin"
+    }
+
+    function ambilDataMakanan() {
+        let data = document.getElementsByClassName("makanan");
+        // console.log(data.item(0).innerText); // mengambil elemen pertama dengan class "makanan"
+        // console.log(data.item(1)); // mengambil elemen kedua dengan class "makanan"
+        let jumlahData = data.length; // menghitung jumlah elemen dengan class "makanan"
+        for (i = 0; i < jumlahData; i++) {
+            console.log(data.item(i).innerText); // menampilkan isi dari setiap elemen dengan class "makanan"
+        }
+    }
+
+    
+</script>
+</html>
