@@ -8,6 +8,12 @@
 <body>
     <table>
 
+        <tr>
+            <th>PID</th>
+            <th>Nama</th>
+            <th>Harga</th>
+        </tr>
+        
         <?php 
         // FUNGSI 1 : membuat koneksi ke database
         $koneksi = new mysqli("localhost", "root", "", "nwind");
@@ -26,12 +32,6 @@
             // var_dump($data->ProductName); // menampilkan nama produk saja, karena data sudah dalam bentuk objek, maka bisa langsung memanggil propertinya, tapi string masih kelihatan karena pake var_dump
         ?>
 
-        <tr>
-            <th>PID</th>
-            <th>Nama</th>
-            <th>Harga</th>
-        </tr>
-        
         <tr>
             <td><?= $data->ProductID; ?></td>
             <td><?= $data->ProductName; ?></td>
