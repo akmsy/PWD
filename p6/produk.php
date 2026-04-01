@@ -13,12 +13,14 @@
             <th>Nama</th>
             <th>Harga</th>
         </tr>
-        
+
         <?php 
         // FUNGSI 1 : membuat koneksi ke database
         $koneksi = new mysqli("localhost", "root", "", "nwind");
         //alamat server, username, password, nama database
+        // $cid = $_GET["cid"]; // menangkap data yang dikirim melalui url, lalu disimpan dalam variabel cid
         $sql = "SELECT * FROM products"; // mengambil data dari tabel products
+        // $sql = "SELECT * FROM products WHERE CategoryID = $cid"; // mengambil data dari tabel products
         
         // FUNGSI 2 : mengeksekusi sql
         $produk = $koneksi->query($sql); // mengeksekusi sql menggunakan fungsi query yang melekat pada sebuah koneksi
