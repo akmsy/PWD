@@ -35,8 +35,13 @@
         ?>
 
         <tr>
-            <td><?= $data->ProductID; ?></td>
+            <!-- <td><?= $data->ProductID; ?></td>
             <td><?= $data->ProductName; ?></td>
+            <td><?= $data->UnitPrice; ?></td> -->
+
+            <!-- buat link untuk membuat detail  -->
+            <td><?= $data->ProductID; ?></td>
+            <td><a href="detail.php?id=<?= $data->ProductID; ?>"><?= $data->ProductName; ?></a></td>
             <td><?= $data->UnitPrice; ?></td>
         </tr>
 
