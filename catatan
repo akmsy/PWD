@@ -1,0 +1,4 @@
+Melihat daftar harga barang, detail sebuah barang, kita beli
+
+$_SESSION -> variabel array // fungsinya untuk merecord data, sehingga data tetep ada walaupun berpindah" di beberapa page
+                            // jika tidak memakai $_SESSION data hanya akan tersimpan selama file php tersebut dieksekusi
