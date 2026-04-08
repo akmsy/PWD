@@ -12,15 +12,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
+    <title>Detail Produk</title>
 </head>
 <body>
     <table>
-        <!-- <tr>
-            <th>ID</th>
-            <th>Nama</th>
-            <th>Harga</th>
-        </tr> -->
         <tr>
             <td>ID</td>
             <td> : </td>
@@ -35,6 +30,17 @@
             <td>Harga</td>
             <td> : </td>
             <td><?= $p->UnitPrice; ?></td>
+        </tr>
+        <tr>
+            <td>Jumlah dibeli</td>
+            <td> : </td>
+            <td>
+                <form action="shoppingcart.php" method="GET">
+                    <input type="hidden" name="id" value="<?= $p->ProductID; ?>">
+                    <input type="text" name="jumlah" size="5">
+                    <input type="submit" value="Beli">
+                </form>
+            </td>
         </tr>
     </table>
 </body>
